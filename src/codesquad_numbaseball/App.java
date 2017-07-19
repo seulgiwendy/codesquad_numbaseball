@@ -24,7 +24,7 @@ public class App {
 		while(progSwitch) {
 			
 			for (int i = 0; i < repeatTimes; i++) {
-				System.out.println(i + "번째 숫자 입력: ");
+				System.out.println((i + 1) + "번째 숫자 입력: ");
 				try {
 				userInputBall [i] = input.nextInt();}
 				catch(Exception e) {
