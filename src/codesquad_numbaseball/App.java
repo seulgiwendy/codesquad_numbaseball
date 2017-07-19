@@ -9,6 +9,7 @@ public class App {
 		int repeatTimes = 3;
 		int ballCount = 0;
 		int strikeCount = 0;
+		int attempts = 1;
 		
 		
 		/*int [] result = NumShuffler.returnRandint();
@@ -22,13 +23,14 @@ public class App {
 		int [] userInputBall = new int [repeatTimes];
 		
 		while(progSwitch) {
-			
+			System.out.println(attempts + "번째 시도입니다. 행운을 빕니다!");
 			for (int i = 0; i < repeatTimes; i++) {
 				System.out.println((i + 1) + "번째 숫자 입력: ");
 				try {
 				userInputBall [i] = input.nextInt();}
 				catch(Exception e) {
-					e.printStackTrace();;
+					System.err.println("오류가 발생했습니다.");
+					e.printStackTrace();
 				}
 				
 			}
@@ -40,6 +42,8 @@ public class App {
 			System.out.println("수뚜라익~~삼진!! 정답을 맞추셨습니다!");
 			progSwitch = false;
 		}
+		System.out.println("다시 한 번 시도해 보세요!\n");
+		attempts += 1;
 		}
 	}
 
