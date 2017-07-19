@@ -18,6 +18,7 @@ public class App {
 		
 		int [] computerBall = NumShuffler.returnRandint();
 		System.out.println("랜덤한 숫자 3개가 생성되었습니다. \n 숫자야구를 시작합니다!");
+		//System.out.println("랜덤한 숫자 세 개는 " + computerBall [0] + computerBall [1] + computerBall[2] + "입니다");//프로그램 테스트용 코드입니다.
 		int [] userInputBall = new int [repeatTimes];
 		
 		while(progSwitch) {
