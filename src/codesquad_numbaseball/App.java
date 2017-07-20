@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class App {
 	
-	public static void main (String args[]) {
+	public static void main (String args[]) throws Exception {
 		Scanner input = new Scanner(System.in);
 		boolean progSwitch = true;
 		int repeatTimes = 3;
@@ -31,6 +31,19 @@ public class App {
 				catch(Exception e) {
 					System.err.println("오류가 발생했습니다.");
 					e.printStackTrace();
+				}
+				if (i > 0) {
+					while(userInputBall[i] == userInputBall[i - 1]) {
+						System.out.println("중복 입력은 안됩니다!");
+						System.out.println((i + 1) + "번째 숫자 다시 입력");
+						try {
+							userInputBall[i] = input.nextInt();
+						}
+						catch(Exception e) {
+							System.err.println("오류가 발생했습니다.");
+							e.printStackTrace();
+						}
+					}
 				}
 				
 			}
